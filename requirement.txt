@@ -1,0 +1,8 @@
+streamlit
+neo4j
+langchain
+llama-cpp-python  # Assuming llama.cpp backend
+transformers
+sentence-transformers
+pydantic
+python-dotenv
