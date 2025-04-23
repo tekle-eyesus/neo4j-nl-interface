@@ -12,10 +12,10 @@ def load_llama():
 
 llm = load_llama()
 
-def generate_cypher(question: str):
+def generate_cypher(question: str, schema: str):
     prompt = PromptTemplate.from_template(NL_TO_CYPHER_PROMPT)
     chain = LLMChain(llm=llm, prompt=prompt)
-    return chain.run(question)
+    return chain.run({"question": question, "schema": schema})
 
 def generate_explanation(query: str, result: str):
     prompt = PromptTemplate.from_template(CYPHER_TO_TEXT_PROMPT)

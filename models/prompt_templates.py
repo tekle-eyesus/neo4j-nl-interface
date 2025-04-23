@@ -2,10 +2,14 @@
 NL_TO_CYPHER_PROMPT = """
 You are an expert in Neo4j Cypher. Convert the following natural language request into a Cypher query.
 
+Here is the database schema:
+{schema}
+
 Request: {question}
 
 Cypher Query:
 """
+
 
 # Convert Cypher response to friendly text
 CYPHER_TO_TEXT_PROMPT = """
