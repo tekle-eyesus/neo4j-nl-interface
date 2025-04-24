@@ -20,3 +20,15 @@ Result: {result}
 
 Explanation:
 """
+
+
+# Give user friendly answer from the model
+RESULT_SUMMARY_PROMPT = """
+You are a helpful assistant. Based on the result of the Cypher query, provide a direct, user-friendly answer in one sentence.
+
+Question: {question} ?
+Answer: {answer}
+
+Answer:
+"""
+

@@ -1,9 +1,10 @@
-import streamlit as st
+import streamlit as st # type: ignore
 from app.controller import handle_user_input
+
 
 def main_ui():
     st.title("Natural Language Interface to Neo4j")
-
+    
     user_input = st.text_input("Ask something about your graph DB:")
 
     if st.button("Submit") and user_input:
@@ -18,3 +19,7 @@ def main_ui():
 
         st.subheader("Explanation:")
         st.write(response["explanation"])
+
+        # place for the result
+        st.subheader("Model Answer")
+        st.write(response["answer"])

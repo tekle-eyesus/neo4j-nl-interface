@@ -4,3 +4,8 @@
 # Virtual environments
 .venv/
 venv/
+
+# Ignore all models
+/models/*
+!models/.gitkeep  # Optional: keep the folder structure in git
+
