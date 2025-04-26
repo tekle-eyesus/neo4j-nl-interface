@@ -1,8 +1,6 @@
 import os
 from app.query_handler import Neo4jQueryHandler
 from app.llm_utils import generate_cypher, generate_explanation, generate_answer
-# from langchain.graphs import Neo4jGraph
-# from langchain_community.graphs import Neo4jGraph
 from langchain_neo4j import Neo4jGraph
 from dotenv import load_dotenv
 
@@ -11,13 +9,12 @@ load_dotenv()
 
 def handle_user_input(user_input: str):
     # Step 1: Get schema from database
-
     graph = Neo4jGraph(
         url=os.getenv("NEO4J_URI"),
         username=os.getenv("NEO4J_USER"),
         password=os.getenv("NEO4J_PASSWORD")
     )
-    print("Schema:")
+    
     schema_cypher = graph.get_schema
 
     # Step 2: Generate Cypher query with schema context
@@ -30,7 +27,7 @@ def handle_user_input(user_input: str):
 
     # Step 4: Explain the result
     explanation = generate_explanation(cypher_query, str(result))
-    model_answer = generate_answer(user_input, str(result))
+    model_answer = generate_answer(user_input, str(result), str(explanation), schema_cypher)
     return {
         "cypher_query": cypher_query,
         "result": result,

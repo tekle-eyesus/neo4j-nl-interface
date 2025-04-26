@@ -2,9 +2,8 @@ from neo4j import GraphDatabase
 from config.settings import NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD
 import re
 
-
+# func to clean the query 
 def clean_cypher_query(query: str) -> str:
-    print("ROW QUERY \n",query)
     # Remove triple backticks at start/end (if any)
     query = re.sub(r"^```|```$", "", query.strip())
 
@@ -16,7 +15,7 @@ def clean_cypher_query(query: str) -> str:
 
     # Remove trailing semicolon (optional but common)
     query = re.sub(r';\s*$', '', query)
-    print("CLEANED CYPHER \n",query.strip())  # AFTER THE CYPHER CLEANED
+    # print("CLEANED CYPHER \n",query.strip())  # AFTER THE CYPHER CLEANED
     return query.strip()
 
 
