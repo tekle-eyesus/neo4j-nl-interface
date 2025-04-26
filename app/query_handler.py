@@ -28,7 +28,7 @@ class Neo4jQueryHandler:
         with self.driver.session() as session:
             cleaned_query = clean_cypher_query(cypher_query)
             result = session.run(cleaned_query)
-            return [record.data() for record in result] # return the result as list
+            return [record.data() for record in result]   # return the result as list
 
     def close(self):
         self.driver.close()

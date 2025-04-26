@@ -11,4 +11,5 @@ graph = Neo4jGraph(
 )
 
 print("Schema:")
+# Prints the overall schema of the database for model to have context
 print(graph.get_schema)
