@@ -9,7 +9,7 @@ Rules:
 - DO NOT add any comments (`//`) inside the query.
 - DO NOT add any explanations, descriptions, or extra text.
 - The Cypher must be clean, professional, and ready to execute directly in a Neo4j driver without modification.
-
+- When comparing text (like names of players or teams), make the comparison case-insensitive using `toLower()`.
 Here is the database schema:
 {schema}
 
