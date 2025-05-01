@@ -1,3 +1,4 @@
+# SAMPLE STREAMLIT UI
 import streamlit as st # type: ignore
 from app.controller import handle_user_input
 

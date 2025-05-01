@@ -1,5 +1,3 @@
-# gradio_app.py
-
 import gradio as gr
 from app.controller import handle_user_input
 def clean_query_format(query: str) -> str:

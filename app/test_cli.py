@@ -1,3 +1,4 @@
+#TO RUN ON CLI
 from app.controller import handle_user_input
 
 def cli_ui():
@@ -20,7 +21,7 @@ def cli_ui():
         # print(response["result"])
 
         print("\n🤖 Model Answer:")
-        print(response["answer"])  # why it is returning the result always :)
+        print(response["answer"])  
 
         # print("\n📘 Explanation:")
         # print(response["explanation"])

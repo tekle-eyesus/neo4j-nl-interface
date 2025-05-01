@@ -5,7 +5,7 @@ from models.prompt_templates import NL_TO_CYPHER_PROMPT, CYPHER_TO_TEXT_PROMPT, 
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # Make sure API keys are loaded
+load_dotenv() 
 
 # load the Gemini Model
 def load_gemini():
@@ -16,7 +16,6 @@ def load_gemini():
     )
 
 llm = load_gemini()
-
 
 def generate_cypher(question: str, schema: str):
     prompt = PromptTemplate.from_template(NL_TO_CYPHER_PROMPT)
