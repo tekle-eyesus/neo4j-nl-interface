@@ -1,6 +1,5 @@
 from app.controller import handle_user_input
 
-
 def cli_ui():
     print("\n")
     print("🧠 Natural Language to Neo4j CLI")

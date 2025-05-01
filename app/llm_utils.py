@@ -17,7 +17,6 @@ def load_gemini():
 
 llm = load_gemini()
 
-# --- Functions ---
 
 def generate_cypher(question: str, schema: str):
     prompt = PromptTemplate.from_template(NL_TO_CYPHER_PROMPT)
