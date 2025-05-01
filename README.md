@@ -1,4 +1,4 @@
-# 🧠 Natural Language Interface to Neo4j
+# Natural Language Interface to Neo4j
 
 This project provides a conversational interface to query a Neo4j graph database using natural language. Built with **Gradio** and integrates with **LangChain** and **Neo4j**.
 
